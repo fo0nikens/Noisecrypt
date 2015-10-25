@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+	<title>Charme Project</title>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans+Condensed:300|Open+Sans' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+
+
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span_4_of_4 {
+	width: 100%; 
+}
+
+.span_3_of_4 {
+	width: 74.6%; 
+}
+
+.span_2_of_4 {
+	width: 49.2%; 
+}
+
+.span_1_of_4 {
+	width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 880px) {
+	.span_4_of_4 {
+		width: 100%; 
+	}
+	.span_3_of_4 {
+		width: 100%; 
+	}
+	.span_2_of_4 {
+		width: 100%; 
+	}
+	.span_1_of_4 {
+		width: 100%; 
+	}
+}
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span_3_of_3 {
+	width: 100%; 
+}
+
+.span_2_of_3 {
+	width: 66.13%; 
+}
+
+.span_1_of_3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 880px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+}
+
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 880px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+
+
+
+
+	* {
+		padding:0;
+		margin:0;
+	}
+
+	html, body {
+		height:100%;
+	}
+
+	.skrollr-desktop body {
+		height:100% !important;
+	}
+
+	body {
+		    font-size: 20px;
+font-family: 'Open Sans Condensed', sans-serif;
+	}
+
+	p {
+		margin:1em 0;
+	}
+
+	.parallax-image-wrapper {
+		position:fixed;
+		left:0;
+		width:100%;
+		overflow:hidden;
+	}
+
+	.parallax-image-wrapper-50 {
+		height:50%;
+		top:-50%;
+	}
+
+	.parallax-image-wrapper-100 {
+		height:100%;
+		top:-100%;
+	}
+
+	.parallax-image {
+		display:none;
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
+
+	.parallax-image-50 {
+		height:200%;
+		top:-50%;
+	}
+
+	.parallax-image-100 {
+		height:100%;
+		top:0;
+	}
+
+	.parallax-image.skrollable-between {
+		display:block;
+	}
+
+	.no-skrollr .parallax-image-wrapper {
+		display:none !important;
+	}
+
+	#skrollr-body {
+		height:100%;
+		overflow:visible;
+		position:relative;
+	}
+
+	.gap {
+		background:transparent center no-repeat;
+		background-size:cover;
+		position: relative;
+	}
+
+	.skrollr .gap {
+		background:transparent !important;
+	}
+
+	.gap-50 {
+		height:50%;
+	}
+
+	.gap-100 {
+		height:100%;
+	}
+
+	.header, .content {
+		background:#fff;
+		padding:1em;
+
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.content-full {
+		min-height:100%;
+	}
+
+	#done {
+		height:100%;
+	}
+	h1
+	{
+		font-family: "Open Sans";
+		color: #07A8A0;
+		
+		text-transform: uppercase;
+		font-size: 30px;
+		text-align: center;
+		font-weight: normal;
+		min-height: 80px;
+
+	}
+
+	.col
+	{
+		text-align: left;
+	}
+	.col .pad
+	{
+		padding: 32px;
+text-align:center;
+	}
+	a
+	{
+		text-decoration: none;
+		color: #009999;
+	}
+	a:hover
+	{
+		color: #004C4C;
+	}
+	.centeredImg
+	{
+		   position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+	}
+	.button
+	{
+
+		margin: 100px auto;
+		border:1px green solid;
+		color:green;
+		padding: 16px;
+		border-radius:3px;
+		text-align: center;
+
+	}
+		.button:active
+		{
+			color:#fff;
+			background-color: green;
+		}
+
+		.imgmap
+		{
+			background-image:url(imgmap.svg);
+			background-repeat: no-repeat;
+			background-origin: 0px 0px;
+			width: 100px;
+			height: 100px;
+			margin: 0px auto;
+			display:block;
+			background-size: 300px 300px;
+		}
+		.maximgBorder2
+		{
+			display: table;
+			width: 100%;
+			text-align: center;
+			height: 400px;
+		}
+		.maximgBorder
+		{
+			height: 400px;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+
+			width: 100%;
+
+		}
+		.maximg
+		{
+			width: 100%;
+			max-width: 450px;
+		}
+.github {
+position: absolute;
+right:16px;
+top:16px;
+z-index: 99;
+color: #fff;
+}
+.github a {
+color:#fff;
+font-weight: bold;
+
+}
+.github a:hover {
+text-decoration: underline;
+}
+	</style>
+
+
+
+</head>
+<div class="github">
+<a href="http://github.com/mschultheiss/charme">View on GitHub</a> 
+</div>
+
+
+<body style="text-align:center;">
+
+	<div id="skrollr-body">
+		
+		
+		<!--
+
+		-->
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#dragons + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(p1.jpg)"
+			data-anchor-target="#dragons + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		>
+		
+
+		</div>
+
+		
+
+		<!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+	</div>
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#bacons + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(p2.jpg)"
+			data-anchor-target="#bacons + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		></div>
+	</div>
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#kittens + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(p3.jpg)"
+			data-anchor-target="#kittens + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		></div>
+	</div>
+
+
+	<div id="skrollr-body">
+
+		<div class="content-full" id="dragons" style="background-color:#000">
+
+		<div style="width:100%">
+		<img src="img/logo.svg" style="width:100%; max-width: 300px;  margin-top:50vh; top:-300px;" class="centeredImg">
+
+			<img data-0="opacity: 1;" data-220="opacity: 0;"  src="img/scolldown.svg" style="width:100%; max-width: 300px; margin:0px auto; margin-top:-50px;position:absolute; bottom:32px; left:50%; margin-left: -150px; ">
+
+
+		</div>
+
+
+		</div>
+
+
+		
+			<div class="gap gap-100" style="background-image:url(p1.jpg);">
+			
+			<img   src="img/user.svg"  style="width:100%;max-width: 500px; top:50%; margin-top:-200px;" class="centeredImg">
+
+		</div>
+
+		<div class="content-full" id="bacons">
+
+		<div class="section group">
+	<div class="col span_1_of_3">
+<div class="pad">
+	<h1>Collections</h1>
+	<div class="maximgBorder2">
+	<div class="maximgBorder">
+<img src="coll.png" class="maximg"></div></div>
+	<p>On annoying thing in most social network is that you find a lot of useless information in your newsfeed. Charme allows you to subscribe to selected topics of a user only. This means you can subscribe to your boss' company information, but you do not have to subscribe to his familiy photos, for example.</p></div>
+	</div>
+	<div class="col span_1_of_3"><div class="pad">
+		<h1>Semantic Aggregation</h1><div class="maximgBorder2">
+<div class="maximgBorder">	
+<img src="semantic.jpg"  class="maximg"></div></div>
+			<p>When storing information in text form only information gets lost. 
+			In Charme, semantic information can be added to posts and make sure the desired audience will find them later. Such information include free seats in your car, item offers and events for example.</p></div>
+	</div>
+	<div class="col span_1_of_3"><div class="pad">
+		<h1>Group Messaging</h1>	<div class="maximgBorder2"><div class="maximgBorder">
+		<img src="msg.png"  class="maximg"></div></div>
+		<p>This has every social network right now. But in contrast to other instant messaging services we feature a wide range of outstanding, lovely designed, and extremly useful Oktoberfest icons like brezel, bavarian flag, hendl, beer, dirndl and lederhosen.</p></div>
+	</div>
+</div>
+
+
+
+			
+
+
+		
+		</div>
+
+	
+		<div class="gap gap-100" style="background-image:url(p2.jpg);">
+					
+			<img   src="img/monopoly.svg"  style="width:100%;max-width: 500px; top:50%; margin-top:-100px;" class="centeredImg">
+
+				
+		</div>
+
+		<div class="content content-full" id="kittens">
+			
+				<div class="section group">
+	<div class="col span_1_of_3">
+<div class="pad">
+
+<h1>Encryption</h1>
+	<div class="imgmap"></div>
+	<p>Charme uses end-to-end encryption for user messages, private profile information and encrypted posts. This means not even the server that hosts your data can read your private data. The data is encrypted on your device and decripted on devices of users you shared the data with.
+	To achieve this, client and server are two seperate projects that communicate via JSON to each other.
+	</p></div>
+	</div>
+	<div class="col span_1_of_3"><div class="pad">
+
+		<h1>Distributed Servers</h1>
+	<div style="background-position:-100px -0px;" class="imgmap"></div>
+			<p>One great things about email is that everybody can setup his own server. You can do the same thing for Charme. Host your own server within the global Charme network or setup a private server somewhere in your companies intranet. There is no central server needed at all.</p></div>
+	</div>
+	<div class="col span_1_of_3"><div class="pad">
+		<h1>Open Source</h1>
+			<div style="background-position:-0px -100px;" class="imgmap"></div>
+		<p>Charme is  licensed under <a href='http://www.gnu.org/licenses/quick-guide-gplv3'>GNU GPLv3</a>, so the source code is fully available, which means everybody can check out how Charme works, make improvments, provide bugfixes or verify the security. </p></div>
+	</div>
+
+
+
+	
+</div>
+
+
+
+
+
+		</div>
+
+
+		<div class="gap gap-100" style="background-image:url(3.jpg);">
+	
+		<img   src="img/tec.svg"  style="width:100%;max-width: 500px; top:50%; margin-top:-10px;" class="centeredImg">
+
+		</div>
+		<div class="content" id="done">
+		
+
+
+
+			<div class="section group">
+	<div class="col span_1_of_3">
+<div class="pad">
+	<h1>Responsive Design</h1>
+	<div style="background-position:-100px -100px;" class="imgmap"></div>
+	<p>You can use Charme on your tablet, on your smartphone or on your desktop PC.</p></div>
+	</div>
+	<div class="col span_1_of_3"><div class="pad">
+		<h1>Scalable</h1>
+		<div style="background-position:-00px -200px;" class="imgmap"></div>
+			<p>Charme uses <a href='http://www.mongodb.org/'>MongoDB</a> as a database - a fast and reliable document oriented database.</p></div>
+	</div>
+	<div class="col span_1_of_3"><div class="pad">
+		<h1>A minimalistic UI</h1>
+	<div style="background-position:-100px -200px;" class="imgmap"></div>
+
+		<p>Charme features a minimalistic  UI, which was developed to lower the distraction level to a minimum. This means: No ads, no recommendations and no spam. </p></div>
+	</div>
+</div>
+
+	<div style="margin:100px auto;">
+	<!--<a class="button" href="#">Try it now!</a>&nbsp;&nbsp;&nbsp;-->
+
+We will release a technology preview very, very soon, until then you can try to run it own your own by getting the source from GitHub source:<br><br><br>
+
+<a class="button" href="#">Github</a>
+</div>
+
+
+
+
+
+
+
+
+<div style="padding-top:100px; padding-bottom:32px;">
+			&copy; 2015 Manuel Schultheiß - <a href="http://mschultheiss.com?page_id=9">Imprint</a> <br><br>
+
+			<div style="font-size:80%"> Photos from unsplash.com
+			<a href="https://unsplash.imgix.net/7/sunset-hair.jpg?q=75&fm=jpg&auto=format&s=8e4672f5c1cdb8c0a72e6b63c211d14d">[1]</a>
+<a href="https://unsplash.imgix.net/6/mountain.JPG?q=75&fm=jpg&auto=format&s=4f82f8c8a74895dff9d21cf64bb704b4">[2]</a>
+<a href="https://unsplash.imgix.net/6/blurred_lines.jpeg?q=75&fm=jpg&auto=format&s=3ac1501a75d9b2286c6593da34f85592">[3]</a>
+</div></div>
+		</div>
+	</div>
+
+
+	</div>
+
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false,
+			smoothScrolling: false
+	});
+	</script>
+</body>
+
+</html>
