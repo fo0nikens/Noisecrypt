@@ -16,8 +16,9 @@ function resizeBackground() {
 
 
 	$( ".content-full, .gap-100" ).each(function( index ) {
+		var h = $(window).height()-10;
 
-	    $(this).css("min-height",$(window).height()+"px");
+	    $(this).css("min-height",h+"px");
 			$(".centeredImgLogo").css("margin-top", $(window).height()/2+"px");
 	});
 
@@ -407,8 +408,8 @@ text-decoration: underline;
 		<h1>Semantic Aggregation</h1><div class="maximgBorder2">
 <div class="maximgBorder">
 <img src="context.jpg"  class="maximg"></div></div>
-			<p>When storing information in text form only information gets lost.
-			In Charme, semantic information can be added to posts and make sure the desired audience will find them later. Such information include free seats in your car, item offers and events for example.</p></div>
+			<p>When storing information in text form only, information gets lost.
+			In Charme, semantic information ("Context") can be added to posts and make sure the desired audience will find them later. Such information include free seats in your car, item offers and events for example.</p></div>
 	</div>
 	<div class="col span_1_of_3"><div class="pad">
 		<h1>Group Messaging</h1>	<div class="maximgBorder2"><div class="maximgBorder">
@@ -460,19 +461,19 @@ text-decoration: underline;
 <h1>Encryption</h1>
 	<div class="imgmap"></div>
 	<p>Charme uses end-to-end encryption for user messages, private profile information and encrypted posts. This means not even the server that hosts your data can read your private data. The data is encrypted on your device and decripted on devices of users you shared the data with.
-	To achieve this, client and server are two seperate projects that communicate via JSON to each other.
+	
 	</p></div>
 	</div>
 	<div class="col span_1_of_3"><div class="pad">
 
 		<h1>Distributed Servers</h1>
 	<div style="background-position:-100px -0px;" class="imgmap"></div>
-			<p>One great things about email is that everybody can setup his own server. You can do the same thing for Charme. Host your own server within the global Charme network or setup a private server somewhere in your companies intranet. There is no central server needed at all.</p></div>
+			<p>One great things about email is that everybody can setup his own server. You can do the same thing with Charme. Host your own server within the global network or setup a private server somewhere in your companies intranet. There is no central server needed at all. Users can interact with other servers seamlessly: They can write messages, receive posts and visit profiles on other servers.</p></div>
 	</div>
 	<div class="col span_1_of_3"><div class="pad">
 		<h1>Open Source</h1>
 			<div style="background-position:-0px -100px;" class="imgmap"></div>
-		<p>Charme is  licensed under <a href='http://www.gnu.org/licenses/quick-guide-gplv3'>GNU GPLv3</a>, so the source code is fully available, which means everybody can check out how Charme works, make improvments, provide bugfixes or verify the security. </p></div>
+		<p>Charme is  completly Open Source and licensed under <a href='http://www.gnu.org/licenses/quick-guide-gplv3'>GNU GPLv3</a>, so the source code is fully available, which means everybody can check out how Charme works, make improvments, provide bugfixes or verify the security. </p></div>
 	</div>
 
 
@@ -520,13 +521,13 @@ text-decoration: underline;
 	<div style="margin:100px auto;">
 	<!--<a class="button" href="#">Try it now!</a>&nbsp;&nbsp;&nbsp;-->
 
-We will release a technology preview very, very soon, until then you can try to run it own your own by getting the source from GitHub source:<br><br><br>
+The Demo Client is the front-end for accessing the network. You need a server to use it, though. To learn how to setup a server, have a look at our Github page:<br><br><br>
 
 <a class="button" href="#">Github</a> <a class="button" href="http://mschultheiss.github.io/Charme/client/v1/index.html">Demo Client</a>
 
 <br><br><br><br>
-If you want to support development and have to much money, you can send me some:<br><br>
-<a href="support.html" class="button">Donate</a>
+If you want to support development and have to much money, you can do via PayPal, Flattr or Bitcoin:<br><br><br>
+<a href="support.html" class="button">Support Development with Money</a>
 </div>
 
 
