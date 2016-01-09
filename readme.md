@@ -7,8 +7,7 @@ The software is not completed yet, as many things such as Spam or integrity prot
 - [Demo](http://mschultheiss.github.io/Charme/client/v1)  - Do not provide any personal data as content is not served via https and the whole thing is not completely secure yet! Provide "mschultheiss.com" (or your own Charme server url) as a server when being asked at signup. Please note that data is reset periodically and the demo server is not always available as it is not very powerful. Setup your own server if you want a better test environment. Try to clear your cache if something is not working properly.
 - [Paper](https://rawgit.com/mschultheiss/Charme/master/doc/tex/main.pdf) - The paper describes the basic ideas and the protocol of Charme. Please note that it is unfinished.
 - [Questions](https://groups.google.com/forum/?hl=de&fromgroups#!forum/charmeproject) - Ask in the Google group
-- [Twitter Updates](https://twitter.com/m_schultheiss) - Get informed about updates
-- [Send Money](http://mschultheiss.github.io/Charme/support.html) - You can support development by sending me some money via Paypal, Bitcoin or Flattr.
+
 
 
 You can add semantic information to your posts. With this feature it is possible to perform search queries like "Show me all events created by my fellow students in a 30 km radius" or "Show me all friends driving from Munich to Augsburg tommorrow":
@@ -19,6 +18,7 @@ The code is of not-so-good (horrible) quality right now and will be refactored a
 
 
 ## Setup a client
+  * ONLY USE FOR TESTING!!
   * You can use the Demo Client, linked above for testing
   * You can also run it on your own server by copying the files in `/jsclient` on your server to test. Please note the client does not support https right now, due to mixed content policy.
   * Later we will provide native build for Windows, Mac etc.
