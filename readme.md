@@ -1,11 +1,11 @@
-![Screenshot](https://raw.githubusercontent.com/mschultheiss/Charme/master/demo/vid.gif "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/mschultheiss/Cryptcharm/master/demo/vid.gif "Screenshot")
 
-*﻿Charme* is a decentralized social network with end-to-end encryption. You can save your user data on a server of your choice while you can still interact (write messages, visit profiles, etc.) with people on other servers. Furthermore messages, private posts and private profile information are end-to-end encrypted. **This is a preview version and it is not ready for production use yet.
+*﻿Cryptcharm* is a decentralized social network with end-to-end encryption. You can save your user data on a server of your choice while you can still interact (write messages, visit profiles, etc.) with people on other servers. Furthermore messages, private posts and private profile information are end-to-end encrypted. **This is a preview version and it is not ready for production use yet.
 The software is not completed yet, as many things such as Spam or integrity protection are missing and will probably take some more years development time until the first stable release.**
 
 - [Video](https://www.youtube.com/watch?v=FwAmeVs_fJc&feature=youtu.be) - Watch the video to get a basic functional overview. You should do that before trying the demo.
-- [Demo](http://mschultheiss.github.io/Charme/client/v1)  - Do not provide any personal data as content is not served via https and the whole thing is not completely secure yet! Provide "mschultheiss.com" (or your own Charme server url) as a server when being asked at signup. Please note that data is reset periodically and the demo server is not always available as it is not very powerful. Setup your own server if you want a better test environment. Try to clear your cache if something is not working properly.
-- [Paper](https://rawgit.com/mschultheiss/Charme/master/doc/tex/main.pdf) - The paper describes the basic ideas and the protocol of Charme. Please note that it is unfinished.
+- [Demo](http://mschultheiss.github.io/Cryptcharm/client/v1)  - Do not provide any personal data as content is not served via https and the whole thing is not completely secure yet! Provide "mschultheiss.com" (or your own Cryptcharm server url) as a server when being asked at signup. Please note that data is reset periodically and the demo server is not always available as it is not very powerful. Setup your own server if you want a better test environment. Try to clear your cache if something is not working properly.
+- [Paper](https://rawgit.com/mschultheiss/Cryptcharm/master/doc/tex/main.pdf) - The paper describes the basic ideas and the protocol of Cryptcharm. Please note that it is unfinished.
 - [Questions](https://groups.google.com/forum/?hl=de&fromgroups#!forum/charmeproject) - Ask in the Google group
 
 
@@ -42,9 +42,9 @@ The passphrase encrypts all your private data. We can not provide a "forgot pass
 
 ### You have stolen the collection feature from Google Plus!
 Wrong! Google introduced collections in May 2015 (https://plus.google.com/+googleplus/posts/7ZpGWeou2sV).
-Charme had collections since 2012. Check out the commits from 2012/2013:
-* https://github.com/mschultheiss/Charme/commit/a46d47bd4c59bf7fcae4c85992d271970d4e4f68
-* https://github.com/mschultheiss/Charme/commit/eb8f2a7d8eb5534cb76db692dd489f78fd7a859d
+Cryptcharm had collections since 2012. Check out the commits from 2012/2013:
+* https://github.com/mschultheiss/Cryptcharm/commit/a46d47bd4c59bf7fcae4c85992d271970d4e4f68
+* https://github.com/mschultheiss/Cryptcharm/commit/eb8f2a7d8eb5534cb76db692dd489f78fd7a859d
 
 
 
@@ -81,18 +81,18 @@ Directories:
 ### How to Contribute?
 
 * Help testing or write code! You can also write code for stand alone components while having zero knowledge about the system architecture itself!
-* Getting started: https://github.com/mschultheiss/Charme/wiki/Getting%20Started
+* Getting started: https://github.com/mschultheiss/Cryptcharm/wiki/Getting%20Started
 * Ask questions here: https://groups.google.com/forum/?hl=de&fromgroups#!forum/charmeproject
 
 
 
 
 ## Libraries
- A lot of libraries are used in Charme. Find a list <a href="/doc/libraries.md">here</a>.
+ A lot of libraries are used in Cryptcharm. Find a list <a href="/doc/libraries.md">here</a>.
 
 
 ## License
-Charme is a distributed social network with end-to-end encryption
+Cryptcharm is a distributed social network with end-to-end encryption
 
 Copyright (C) 2015 Manuel Schultheiß
 
