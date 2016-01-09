@@ -5,7 +5,7 @@
 *﻿Noisecrypt* is a decentralized social network with end-to-end encryption. You can save your user data on a server of your choice while you can still interact (write messages, visit profiles, etc.) with people on other servers. Furthermore messages, private posts and private profile information are end-to-end encrypted. **This is a preview version and it is not ready for production use yet.
 The software is not completed yet, as many things such as Spam or integrity protection are missing and will probably take some more years development time until the first stable release.**
 
-- [Video](https://youtu.be/BCj4OOheZG0) - A short demo video. Watch this first before testing it yourself.
+- [Video](https://youtu.be/JoIvJD884-s) - A short demo video. Watch this first before testing it yourself.
 - [Demo](http://mschultheiss.github.io/Noisecrypt/client/v1)  - Do not provide any personal data as content is not served via https and the whole thing is not completely secure yet! Provide "mschultheiss.com" (or your own server url) as a server when being asked at signup. Please note that data is reset periodically and the demo server is not always available as it is not very powerful. Setup your own server if you want a better test environment. Try to clear your cache if something is not working properly.
 - [Paper](https://rawgit.com/mschultheiss/Noisecrypt/master/doc/tex/main.pdf) - The paper describes the basic ideas and the protocol. Please note that it is unfinished.
 
