@@ -42,9 +42,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.5}Key Updates}{14}{subsection.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6}Primary Attack Vectors}{14}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.6}Primary Attack Vectors}{15}{subsection.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.6.1}Data Integrity}{14}{subsubsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1}Data Integrity}{15}{subsubsection.5.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.6.2}MITM on Client Software}{15}{subsubsection.5.6.2}
 \defcounter {refsection}{0}\relax 

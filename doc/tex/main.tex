@@ -29,7 +29,7 @@
 \usetikzlibrary{matrix,shapes,arrows,positioning,chains, calc}
 
  \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} %make url break
-\title{Charme: A distributed social network with end-to-end encryption and contextual information (DRAFT)}
+\title{A decentralized social network with end-to-end encryption and contextual information (DRAFT)}
 \author{Manuel Schultheiß\\manuel.schultheiss@tum.de}
 \begin{document}  \sloppy % sloppy is used for making url{} break
  
@@ -38,7 +38,7 @@
 \begin{abstract}
 \noindent
   \textbf{Abstract.} 
-  Decentralized social networks with end-to-end encryption would take back control of data to the end-users. In this paper Charme is presented as such a network. First, some  basic cryptographic  principles are explained before focusing on the underlying  protocol.
+  Decentralized social networks with end-to-end encryption would take back control of data to the end-users. In this paper Noisecrypt is presented as such a network. First, some  basic cryptographic  principles are explained before focusing on the underlying  protocol.
   \end{abstract}
   
   
@@ -68,9 +68,9 @@ But beside ads have become the number one revenue model for internet companies a
 \section{Introduction}
 In contrast to classic social networks, distributed social networks with end-to-end encryption can provide self control of your data and  independence from big companies.  \textit{Distributed} means, that there is no central server hosting your data, but many small servers all around the world, which everyone can  setup. Just like email, every participant has a unique address like \textit{yourname@yourserver.com}. People can interact seamlessly with people on other server. With end-to-end encryption not even the server hosting your data can see your data. This is necessary for a distributed architecture as otherwise the server admin could read your messages, for example.\\
 
-Another innovation of Charme is the so called \textit{Context}, every post can have optionally. A context contains semantic, computer-readable information about the post.
+Another innovation of Noisecrypt is the so called \textit{Context}, every post can have optionally. A context contains semantic, computer-readable information about the post.
  An algorithm can later aggregate all people moving from point A to point B tomorrow, with having 3 seats free in their car with a tolerance of 20 kilometers, for example. Or you can look up for friends making pizza for lunch and want to share their food today. Figure \ref{figContext} shows the creation of a context and the creation of a filter to search for existing context of other users. 
- Websites already providing share-economy services can also add their data to the Charme network, using the Charme Schema JSON Syntax, as defined in the file schema.coffee. The context system introduces elements of the \textit{Web of Data}, formerly known as the semantic web to social networks.
+ Websites already providing share-economy services can also add their data to the Noisecrypt network, using the Noisecrypt Schema JSON Syntax, as defined in the file schema.coffee. The context system introduces elements of the \textit{Web of Data}, formerly known as the semantic web to social networks.
 
 \begin{figure}[ht]
 	\centering
@@ -81,7 +81,7 @@ Another innovation of Charme is the so called \textit{Context}, every post can h
 \newpage
  \section{Existing work}
 With Diaspora \cite{diaspora}, one of the first popular distributed social networks was released. The messages are not end-to-end encrypted, however, which makes it possible for the server admin to read its users messages. 
-A more secure concept is \textit{Twister} \cite{twister}, a Twitter like peer-to-peer micro blogging platform. Using the blockchain makes it possible to encrypt messages and even meta data (including the IP Address!). Charme itself does not encrypt meta data at the moment for simplicity and performance reasons, but such an encryption scheme could be implemented later on using techniques like onion routing between sender/receiver for example.
+A more secure concept is \textit{Twister} \cite{twister}, a Twitter like peer-to-peer micro blogging platform. Using the blockchain makes it possible to encrypt messages and even meta data (including the IP Address!). Noisecrypt itself does not encrypt meta data at the moment for simplicity and performance reasons, but such an encryption scheme could be implemented later on using techniques like onion routing between sender/receiver for example.
 
 \newpage
  \section{Encryption and Security}
@@ -198,17 +198,17 @@ Administrations scripts are written for GNU Bash to provide easy ssh access.
 
 
  \subsection{Separation of Client and Server}
-In contrast to classic social networks, we separate client and server in two separate projects first. In Charme, the server does not return HTML to the browser, but JSON instead which is parsed by the client software. This is necessary, as otherwise a server could return malicious javascript to the user for example and make end-to-end encryption useless. For the final release, the user has to download and install the client locally and verify the file hash to have maximum security, For testing purposes, the user can also use a web hosted version of the client. Although they are hosted on different domains, client and server can still connect to each other via cross origin resource sharing (CORS).
+In contrast to classic social networks, we separate client and server in two separate projects first. In Noisecrypt, the server does not return HTML to the browser, but JSON instead which is parsed by the client software. This is necessary, as otherwise a server could return malicious javascript to the user for example and make end-to-end encryption useless. For the final release, the user has to download and install the client locally and verify the file hash to have maximum security, For testing purposes, the user can also use a web hosted version of the client. Although they are hosted on different domains, client and server can still connect to each other via cross origin resource sharing (CORS).
 
 \begin{figure}[ht]
 	\centering
   \includegraphics[]{eds.pdf}
-	\caption{Client and Server code is strictly separated. The client loads the Charme application from a local webserver, a browser plugin or a trusted server. This application connects to the server that is hosting the user's data itself. Hereby, personal data such as messages or private profile information, is encrypted and decrypted on the client side, so the server sees nothing.}
+	\caption{Client and Server code is strictly separated. The client loads the Noisecrypt application from a local webserver, a browser plugin or a trusted server. This application connects to the server that is hosting the user's data itself. Hereby, personal data such as messages or private profile information, is encrypted and decrypted on the client side, so the server sees nothing.}
 	\label{fig1}
 \end{figure}
 
 
-Hereby Charme uses an \textit{encrypted data storage}. This means critical data is encryped with a passhprase using AES-CBC (Section \ref{AESCBC}) and hosted on the server  (Figure \ref{fig1}). Consequently the server can not read the encrypted user data. Such data includes
+Hereby Noisecrypt uses an \textit{encrypted data storage}. This means critical data is encryped with a passhprase using AES-CBC (Section \ref{AESCBC}) and hosted on the server  (Figure \ref{fig1}). Consequently the server can not read the encrypted user data. Such data includes
 \begin{enumerate}
 \item \textbf{Personal information} like phone number. This information can later be decrypted and encrypted with a public key to distribute it to other people.
 \item \textbf{The private RSA key} used to decrypt everything that is received from other users.
@@ -362,7 +362,7 @@ A message consists of information such as \textit{message content}, \textit{conv
   $$
   plaintext = Dec_{B_i}({Dec_K(chiphertext)})
   $$
-  When access is revoked for a user, we simply generate a new bucket key for the bucket assigned to the user and distribute the new bucket key to all users in this bucket. With this system we are able to revoke access to information and release new information to a user with doing $\mathcal O(k) = \mathcal O(1)$ requests. For Charme we set $k = 10$. See figure \ref{fig3} for a illustration of the process.
+  When access is revoked for a user, we simply generate a new bucket key for the bucket assigned to the user and distribute the new bucket key to all users in this bucket. With this system we are able to revoke access to information and release new information to a user with doing $\mathcal O(k) = \mathcal O(1)$ requests. For Noisecrypt we set $k = 10$. See figure \ref{fig3} for a illustration of the process.
   
   
    \begin{figure}[ht]
@@ -379,7 +379,7 @@ A message consists of information such as \textit{message content}, \textit{conv
   
   \subsubsection{Data Integrity}
 We must ensure, that the server can only return data, that has been created by a user. 
-As an example, the autocomplete should only returns name/address pairs that have been added by the user. Imagine the following case: Alice adds Bob with his CharmeId bob@somewhere.com to her key directory. Now she wants to send a message to Bob and opens the auto complete. She types Bob, and the server returns a modified CharmeId, probably on the same server (eve@somewhere.com). The Charme client would now encrypt the message with the other key and send it to Eve. So Eve could be able to get some sensitive information while Alice thinks she is communicating with Bob.
+As an example, the autocomplete should only returns name/address pairs that have been added by the user. Imagine the following case: Alice adds Bob with his Noisecrypt ID bob@somewhere.com to her key directory. Now she wants to send a message to Bob and opens the auto complete. She types Bob, and the server returns a modified Id, probably on the same server (eve@somewhere.com). The Noisecrypt client would now encrypt the message with the other key and send it to Eve. So Eve could be able to get some sensitive information while Alice thinks she is communicating with Bob.
 Therefore we must sign most data with a pass phrase derived key.\\
 
   Also conversation messages itself must be shipped with integrity protection. In contrast to the above example, here we must protect the integrity for other users than our self.
@@ -405,7 +405,7 @@ When we use the conversation key for the hmac of the message, we only protect th
      \end{enumerate}
      A solution for this problem would be to allow only names from the key directory.
    \subsubsection{XSS}
-   One of the most critical attack vectors in Charme is Cross Site Scripting as with this technique private keys can be stolen.
+   One of the most critical attack vectors in Noisecrypt is Cross Site Scripting as with this technique private keys can be stolen.
    Therefore it is important to sanitize all displayed data from other people and servers. Never trust the server. For example imaging data is a JSON Object returned by the server:
    
        \begin{lstlisting}
@@ -434,7 +434,7 @@ Possible counter measures are
      
       
 \item[Spam]      All posts from non-friends should be blocked. An exception are posts containing semantic information which should be searchable all over the web. Here we can either expand the search to friends server (efficient but may contain more spam) or even check friend of friend posts only (more computational power, but less spam).
-\item[Malformed data]      Attackers can send malformed data to clients which results in the client to producing an exception and therefore make Charme unusable for the user. Therefore malformed requests should be filtered by the client by checking for missing and correct typed values.
+\item[Malformed data]      Attackers can send malformed data to clients which results in the client to producing an exception and therefore make Noisecrypt unusable for the user. Therefore malformed requests should be filtered by the client by checking for missing and correct typed values.
 \item[DDoS]
 Attackers can flood small servers with a lot of requests.
 \item[Session Capturing] Send JSON request from another Website to host server. Make sure you can not access unencrypted user data such as lists for example.
@@ -666,7 +666,7 @@ $D_j$ is a JSON string, containing data such as encrypted text $m$, the username
 The remaining work is primary to refactor the code, add missing security stuff and improve the search function.
 For searching posts, we can also try to hide the text and context  parameters, such as longitude, latitude or price . For example,  CryptDB \cite{cryptdb} is a working SQL implementation. Its developers also responded to the paper  \emph{Inference attacks on property preserving encrypted databases} \cite{INF} which questioned the security of such databases.
 %  \subsection{Token Generation and API}
-%  In the future Charme will be able to be used by other applications as data storage. Therefore, we create a key $A_i$ and a token $T_i$ for each application i.
+%  In the future Noisecrypt will be able to be used by other applications as data storage. Therefore, we create a key $A_i$ and a token $T_i$ for each application i.
 %All keys and tokens are generated randomly and encrypted with a passphrase derived key A' ("fastkey"). When the passphrase is updated, we need to recrypt A'.
 %An application can now save data to the Charme server, once the triplet $A_i$, $T_i$ and Charme userId was added to the application.
 %To perform an action A, the Charme server sends a random value R to the application. The application generates the hash value $H(A|R|T_i)$ and sends it back to the server, where the hash is validated to maintain authenticity. Actions can be  STORE(key, value) and GET(key). Possible applications could be a note taking app or a calendar, saving data encrypted on the server for example. A application that is quite similar is Kinto \cite{kinto}, but it does not provide an integrated encryption scheme with automatic key generation.
@@ -727,7 +727,7 @@ Kind of neologism. Means to decrypt with an old key and encrypt with a new key. 
 \textbf{Revision} &
 The version of the public key or edgekey. If a new key is established, it increases by 1.\\\\
 
-\textbf{userId} &  An unique identifier for each person in the Charme network, similar to email. Example: ms@myserver.com
+\textbf{userId} &  An unique identifier for each person in the Noisecrypt network, similar to email. Example: ms@myserver.com
 \end{tabular}
 
 
