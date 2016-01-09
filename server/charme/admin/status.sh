@@ -26,11 +26,7 @@ Whi='\e[0;37m';     BWhi='\e[1;37m';    UWhi='\e[4;37m';    IWhi='\e[0;97m';    
 echo -e ""
 echo -e ""
 echo -e "-------------------------------------------------------------------------------"
-echo -e "${BWhi}This is Charme Status Version 0.1 $RCol"
-echo -e "Copyright (c) 2015 Manuel Schultheiss\n"
-echo -e "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law."
+echo -e "${BWhi} Status Version 0.1 $RCol"
 echo -e "-------------------------------------------------------------------------------"
 
 #

@@ -13,7 +13,7 @@ echo -e "\n"
 echo -e "################################################################"
 echo -e "Note: Make sure you are in superuser mode... Type 'su' to do so."
 echo -e "################################################################"
-echo -e "\nStarting Charme..."
+echo -e "\nStarting..."
 
 sleep 1
 
@@ -101,7 +101,7 @@ fi
 
 
 sleep 1
-echo -e  "Starting Charme Status now..."
+echo -e  "Starting Status now..."
 
 ./status.sh
 

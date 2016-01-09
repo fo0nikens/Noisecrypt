@@ -147,7 +147,7 @@ step1b() {
 	read -r -p "Do you want to install Charme? [y/N]  " response
 	if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
-	    echo "Installing Charme...."
+	    echo "Installing...."
 	    step2
 	else
 	    echo "Installation cancelled...."
